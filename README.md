@@ -44,14 +44,26 @@ GET   | `{ "tipo_elemento" : "Cancion"`<br> `"autor" : "Muse" }` | Las validacio
 
 Método      | JSON body  | Validaciones   | Errores   | Respuesta con error  | Respuesta sin error
 ----------- | ---------- | -------------- | --------- | -------------------  | --------------------
-POST   | ```json``` | Las validaciones se hacen únicamente revisando si el elemento en la base de datos existe por medio de un query. | Los errores se verifican por medio de un _if_ del tipo `elem.length == 0`. | `The element does not exist` |  `Cambio realizado`
+POST   | `{ "filtro": { "_id": "61773908ee18c1c3495e7940", ` <br> `"tipo_elemento": "Libros", "nombre_elemento": "sdjfhs", ` <br> `"autor": "sdfsd", "fecha_creacion": "dshfsdfs", ` <br> `"editorial": "dsfkjsdkf", "__v": 0 }, ` <br> `"cambio": { "nombre_elemento": "Hola" } }` | Las validaciones se hacen únicamente revisando si el elemento en la base de datos existe por medio de un query. | Los errores se verifican por medio de un _if_ del tipo `elem.length == 0`. | `The element does not exist` |  `Cambio realizado`
               
 * **DELETE**
 
 Método      | JSON body  | Validaciones   | Errores   | Respuesta con error  | Respuesta sin error
 ----------- | ---------- | -------------- | --------- | -------------------  | --------------------
-POST   | ```json``` | Las validaciones se hacen únicamente revisando si el elemento en la base de datos existe por medio de un query. | Los errores se verifican por medio de un _if_ del tipo `elem.length == 0`. | `The element does not exist` |  `Elemento eliminado`
+POST   | `{ "_id": "6177389537ab921a388c3b0b" }` | Las validaciones se hacen únicamente revisando si el elemento en la base de datos existe por medio de un query. | Los errores se verifican por medio de un _if_ del tipo `elem.length == 0`. | `The element does not exist` |  `Elemento eliminado`
               
-
-
 ## Screenshots de prueba
+
+* **CREATE**
+![create](https://user-images.githubusercontent.com/42308682/139518375-445e20e0-1ab3-449e-a82a-d2b0d150d600.jpeg)
+
+* **READ**
+![read](https://user-images.githubusercontent.com/42308682/139518378-918e08fc-2532-4876-aa2c-4178334ce41c.jpeg)
+
+* **UPDATE**
+![update](https://user-images.githubusercontent.com/42308682/139518383-c0e0c4ba-dcb8-44be-8bb3-78dc9bb9c5ac.jpeg)
+
+* **DELETE**
+![delete](https://user-images.githubusercontent.com/42308682/139518388-6cfc8fb7-2f4c-496a-b36c-91d125f37d65.jpeg)
+
+
